@@ -9,18 +9,20 @@ public class SquareContainer extends StraightContainer {
 	private double baseSquare;
 	private String name;
 
-	SquareContainer (String name, double a, HashMap<String, Double> liquids) {
+	SquareContainer (double a) {
 		
-		this.name = name;
-		this.liquids = liquids;
-		this.baseSquare = a * a;
+		this.baseSquare = computeSquare(a);
 		
-		bucket = new Liquid(name, this.liquids, getVolume());
 	}
 	
 	public double getSquare() {
 		
 		 return baseSquare;
+		
+	}
+	private double computeSquare(double a) {
+		
+		return a * a;
 		
 	}
 }

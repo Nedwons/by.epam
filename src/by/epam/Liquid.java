@@ -16,8 +16,13 @@ public class Liquid {
 		this.liquids = liquids;
 		this.volume = volume;
 		this.density = (double) liquids.get( name );
-		this.mass = density * volume;
+		this.mass = computeMass(density, volume);
 	
+	}
+	private double computeMass(double density, double volume) {
+		
+		return density * volume;
+		
 	}
 	
 	public double getMass() {
