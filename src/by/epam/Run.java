@@ -10,9 +10,9 @@ public class Run {
 		liquids.put("Kerosine",new Double (820));
 		liquids.put("Oil",new Double (910));
 		
-		//SquareContainer map = new SquareContainer("Benzene",10 , liquids);
-		//System.out.println("Масса ="+map.bucket.getMass());
+		Liquid map = new Liquid("Benzene", liquids,10 );
+		System.out.println("Масса ="+map.getMass());
 	
-		
+		//Liquid(String name, HashMap<String, Double> liquids, double volume
 	}
 }

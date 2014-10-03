@@ -15,10 +15,17 @@ public class Liquid {
 		this.name = name;
 		this.liquids = liquids;
 		this.volume = volume;
-		this.density = (double) liquids.get( name );
+		this.density = getDensity(name);
 		this.mass = computeMass(density, volume);
 	
 	}
+	private double getDensity(String name) {
+		
+		return (double) liquids.get( name );
+		
+	}
+	
+	
 	private double computeMass(double density, double volume) {
 		
 		return density * volume;
