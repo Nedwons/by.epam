@@ -1,18 +1,12 @@
 package by.epam;
 
-public class StraightContainer extends Container {
+abstract class StraightContainer extends Container {
 	
-	private double volume;
-	public void setVolume(double baseSquare) {
+	public void setVolumeSquare(double baseSquare) {
 		
-		this.volume = CONTAINER_HIGHT * baseSquare;
+		super.setVolume(CONTAINER_HIGHT * baseSquare);
 		
 	}
 	
-	public double getVolume() {
-		
-		 return this.volume;
-		
-	}
-	
+	abstract double getSquare();
 }

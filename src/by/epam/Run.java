@@ -11,8 +11,9 @@ public class Run {
 		liquids.put("Oil",new Double (910));
 		
 		Liquid map = new Liquid("Benzene", liquids,10 );
+		Container kon = new SquareContainer(15); 
 		System.out.println("Масса ="+map.getMass());
+		System.out.println("Объем ="+kon.getVolume());
 	
-		//Liquid(String name, HashMap<String, Double> liquids, double volume
 	}
 }
