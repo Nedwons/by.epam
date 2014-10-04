@@ -10,10 +10,13 @@ public class Run {
 		liquids.put("Kerosine",new Double (820));
 		liquids.put("Oil",new Double (910));
 		
-		Liquid map = new Liquid("Benzene", liquids,10 );
-		Container kon = new SquareContainer(15); 
-		System.out.println("Масса ="+map.getMass());
-		System.out.println("Объем ="+kon.getVolume());
+		FilledContainer filledContainer = new FilledContainer("Kerosine", 20, liquids);
+		filledContainer.printInfo();
+		
+		//Liquid map = new Liquid("Benzene", liquids,10 );
+		//Container kon = new SquareContainer(10); 
+		//System.out.println("Масса ="+map.getMass());
+		//System.out.println("Объем ="+kon.getVolume());
 	
 	}
 }
