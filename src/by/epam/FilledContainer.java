@@ -4,26 +4,30 @@ import java.util.HashMap;
 
 public class FilledContainer {
 	
-	public String name;
+	private String name;
 	Container container;
 	Liquid liquid;
-	public double a;
-	
+	private double a;
+
 	FilledContainer(String name, double a ,HashMap<String, Double> liquids ) {
 		
 		this.a = a;
 		this.name = name;
 		this.container = new SquareContainer(a);
-		this.liquid = new Liquid(name,liquids,container.getVolume());
+		this.liquid = new Liquid( name, liquids, container.getVolume() );
+		
+	}
+	
+	public String getName() {
+		
+		return this.name;
 		
 	}
 	
 	public void printInfo() {
 		
-		System.out.println("Тип жидкости "+name);
-		System.out.println("сторона квадрата "+a);
-		System.out.println("Масса ="+liquid.getMass());
-		System.out.println("Объем ="+container.getVolume());
+		System.out.printf("| %-12s | %-16.0f | %-7.0f | %-7.0f |", name, a, liquid.getMass(), container.getVolume() );
+		System.out.println(" ");
 		
 	}
 }
