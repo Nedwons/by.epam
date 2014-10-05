@@ -12,16 +12,13 @@ public class Run {
 		liquids.put("Benzene",new Double (740));
 		liquids.put("Kerosine",new Double (820));
 		liquids.put("Oil",new Double (910));
-		
-		Initialization();
-		
-		
-		list.add(new FilledContainer("Benzene", 3, liquids));
-		list.add(new FilledContainer("Kerosine", 20, liquids));
-		list.add(new FilledContainer("Oil", 30, liquids));
-		list.add(new FilledContainer("Kerosine", 5, liquids));
-		list.add(new FilledContainer("Benzene", 4, liquids));
-		
+// инициализация 
+		list.add(new FilledContainer("Benzene", 3, 0, liquids));
+		list.add(new FilledContainer("Kerosine", 20, 0, liquids));
+		list.add(new FilledContainer("Oil", 30, 0, liquids));
+		list.add(new FilledContainer("Kerosine", 5, 0, liquids));
+		list.add(new FilledContainer("Benzene", 4, 0, liquids));
+// сортировка		
 		Collections.sort(list, new FilledContainerMassComparator());
 		
 		System.out.println("Вывод набора емкостей (полный состав атрибутов) и их содержимого:\n");
@@ -31,7 +28,7 @@ public class Run {
 			a.printInfo();
 			
 		}
-		
+// поиск емксоти с наименьшей массой		
 		double minBenzeneMass = 0;
 		Boolean flag = true;
 		FilledContainer minBenzeneMassReference = null;
@@ -51,7 +48,7 @@ public class Run {
 		}
 		if ( minBenzeneMassReference == null ) {
 			
-			System.out.println("\n Емкости с бензином не найдено");
+			System.out.println("\n Нет емкости с бензином");
 			
 		} else {
 			
@@ -60,17 +57,5 @@ public class Run {
 			minBenzeneMassReference.printInfo();
 			
 		}
-				
-		
-	}
-	
-	public void initialization() {
-		
-		
-	}
-
-	private static void Initialization() {
-		// TODO Auto-generated method stub
-		
 	}
 }

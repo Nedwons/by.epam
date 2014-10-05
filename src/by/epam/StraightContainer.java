@@ -7,6 +7,6 @@ abstract class StraightContainer extends Container {
 		super.setVolume(CONTAINER_HIGHT * baseSquare);
 		
 	}
-	
+
 	abstract double getSquare();
 }

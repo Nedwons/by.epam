@@ -9,11 +9,12 @@ public class FilledContainer {
 	Liquid liquid;
 	private double a;
 
-	FilledContainer(String name, double a ,HashMap<String, Double> liquids ) {
+	FilledContainer(String name, double a ,double b, HashMap<String, Double> liquids ) {
 		
 		this.a = a;
 		this.name = name;
-		this.container = new SquareContainer(a);
+		this.container = new SquareStraightContainer(a);
+		
 		this.liquid = new Liquid( name, liquids, container.getVolume() );
 		
 	}
