@@ -17,6 +17,9 @@ public class FilledContainer {
 		this.a = a;
 		this.b = b;
 		this.name = name;
+		this.containerType = containerType;
+		this.baseType = baseType;
+		
 		
 		if( containerType.equalsIgnoreCase("straitght") ) {
 			
@@ -45,7 +48,7 @@ public class FilledContainer {
 	
 	public void printInfo() {
 		
-		System.out.printf("| %-14s | %-19.0s | %-19.0fs |a(r) = %-3.2f b = %-3.2f | %-3.2f | %-3.2f |", name, containerType, baseType, a, b, 
+		System.out.printf("| %-12s | %-17s | %-17s |a(r) = %-5.0f b = %-4.0f | %-14.0f | %-14.0f | %-14d |", name, containerType, baseType, a, b, 
 				liquid.getMass(), container.getVolume(), this.container.CONTAINER_HIGHT );
 		System.out.println(" ");
 		

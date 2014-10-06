@@ -13,22 +13,21 @@ public class Run {
 		liquids.put("Kerosine",new Double (820));
 		liquids.put("Oil",new Double (910));
 // инициализация 
-		list.add(new FilledContainer("Benzene", 3, 0, liquids));
-		list.add(new FilledContainer("Kerosine", 20, 0, liquids));
-		list.add(new FilledContainer("Oil", 30, 0, liquids));
-		list.add(new FilledContainer("Kerosine", 5, 0, liquids));
-		list.add(new FilledContainer("Benzene", 4, 0, liquids));
+		list.add(new FilledContainer("Benzene", "straitght", "square",10 , 0, liquids));
+		list.add(new FilledContainer("Benzene", "straitght", "rectangle",7 , 6, liquids));
+		
 // сортировка		
 		Collections.sort(list, new FilledContainerMassComparator());
 		
 		System.out.println("Вывод набора емкостей (полный состав атрибутов) и их содержимого:\n");
-		System.out.println("| Тип жидкости | сторона квадрата |  Масса  |  Объем  |");
+		System.out.println("| Тип жидкости | Тип стенки сосуда |  Форма основания  |  Параметры основания | Масса жидкости | Объем жидкости | Высота емкости |");
 		for( FilledContainer a : list ) {
 			
 			a.printInfo();
 			
 		}
-// поиск емксоти с наименьшей массой		
+// поиск емксоти с наименьшей массой	
+		System.out.println("\n Емкость с наименьшей массой бензина:");
 		double minBenzeneMass = 0;
 		Boolean flag = true;
 		FilledContainer minBenzeneMassReference = null;
@@ -52,8 +51,7 @@ public class Run {
 			
 		} else {
 			
-			System.out.println("\n \n Параметры емкости с наименьшей массой бензина, залитого в емкость:\n");
-			System.out.println("| Тип жидкости | сторона квадрата |  Масса  |  Объем  |");
+			System.out.println("| Тип жидкости | Тип стенки сосуда |  Форма основания  |  Параметры основания | Масса жидкости | Объем жидкости | Высота емкости |");
 			minBenzeneMassReference.printInfo();
 			
 		}

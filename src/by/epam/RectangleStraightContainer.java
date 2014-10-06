@@ -4,17 +4,17 @@ public class RectangleStraightContainer extends StraightContainer {
 	
 	private double baseSquare;
 	
-	@Override
-	public double getSquare() {
-		
-		return baseSquare;
-		
-	}
-	
 	RectangleStraightContainer (double a, double b ) {
 		
 		this.baseSquare = computeSquare(a, b );
 		setVolumeSquare(getSquare());
+		
+	}
+	
+	@Override
+	public double getSquare() {
+		
+		return baseSquare;
 		
 	}
 	
