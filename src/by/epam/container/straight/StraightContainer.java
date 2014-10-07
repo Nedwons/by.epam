@@ -1,6 +1,6 @@
 package by.epam.container.straight;
 
-import by.epam.Container;
+import by.epam.filledcontainer.Container;
 
 public abstract class StraightContainer extends Container {
 	
@@ -10,5 +10,5 @@ public abstract class StraightContainer extends Container {
 		
 	}
 
-	abstract double getSquare();
+	public abstract double getSquare();
 }

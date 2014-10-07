@@ -2,7 +2,7 @@ package by.epam;
 
 import java.util.*;
 
-import by.epam.container.FilledContainer;
+import by.epam.filledcontainer.FilledContainer;
 
 public class Run {
 
@@ -21,6 +21,7 @@ public class Run {
 		list.add(new FilledContainer("Kerosine", "straitght", "trapezoid", liquids, 1, 2, 3));
 		list.add(new FilledContainer("Benzene", "straitght", "hexagon", liquids, 4));
 		list.add(new FilledContainer("Benzene", "straitght", "circle", liquids, 7));
+		list.add(new FilledContainer("Benzene", "straitght", "ellipse", liquids, 2, 1));
 // сортировка		
 		Collections.sort(list, new FilledContainerMassComparator());
 		

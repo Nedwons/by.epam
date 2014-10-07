@@ -2,7 +2,7 @@ package by.epam;
 
 import java.util.Comparator;
 
-import by.epam.container.FilledContainer;
+import by.epam.filledcontainer.FilledContainer;
 
 public class FilledContainerMassComparator implements Comparator<FilledContainer> {
 

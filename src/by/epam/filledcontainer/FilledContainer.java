@@ -1,10 +1,9 @@
-package by.epam.container;
+package by.epam.filledcontainer;
 
 import java.util.HashMap;
 
-import by.epam.Container;
-import by.epam.Liquid;
 import by.epam.container.straight.CircleStraightContainer;
+import by.epam.container.straight.EllipseStraightContainer;
 import by.epam.container.straight.HexagonStraightContainer;
 import by.epam.container.straight.RectangleStraightContainer;
 import by.epam.container.straight.SquareStraightContainer;
@@ -55,7 +54,15 @@ public class FilledContainer {
 				this.container = new CircleStraightContainer(parameters[0]);
 				
 			}
+			
+			if ( baseType.equalsIgnoreCase("ellipse")  ) {
+
+				this.container = new EllipseStraightContainer(parameters[0], parameters[1] );
+				
+			}
 		}
+		
+		
 		
 		this.liquid = new Liquid( name, liquids, container.getVolume() );
 		
