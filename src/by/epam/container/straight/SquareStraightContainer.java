@@ -1,10 +1,11 @@
-package by.epam;
+package by.epam.container.straight;
+
 
 public class SquareStraightContainer extends StraightContainer {
 	
 	private double baseSquare;
 
-	SquareStraightContainer (double a) {
+	public SquareStraightContainer (double a) {
 		
 		this.baseSquare = computeSquare(a);
 		setVolumeSquare(getSquare());

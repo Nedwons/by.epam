@@ -1,6 +1,8 @@
-package by.epam;
+package by.epam.container.straight;
 
-abstract class StraightContainer extends Container {
+import by.epam.Container;
+
+public abstract class StraightContainer extends Container {
 	
 	public void setVolumeSquare(double baseSquare) {
 		

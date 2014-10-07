@@ -2,6 +2,8 @@ package by.epam;
 
 import java.util.Comparator;
 
+import by.epam.container.FilledContainer;
+
 public class FilledContainerMassComparator implements Comparator<FilledContainer> {
 
 	@Override

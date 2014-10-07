@@ -2,6 +2,8 @@ package by.epam;
 
 import java.util.*;
 
+import by.epam.container.FilledContainer;
+
 public class Run {
 
 	public static void main(String[] args) {
@@ -13,14 +15,17 @@ public class Run {
 		liquids.put("Kerosine",new Double (820));
 		liquids.put("Oil",new Double (910));
 // инициализация 
-		list.add(new FilledContainer("Benzene", "straitght", "square",10 , 0, liquids));
-		list.add(new FilledContainer("Benzene", "straitght", "rectangle",7 , 6, liquids));
-		
+		list.add(new FilledContainer("Benzene", "straitght", "square", liquids, 10));
+		list.add(new FilledContainer("Benzene", "straitght", "rectangle", liquids,7 , 6));
+		list.add(new FilledContainer("Oil", "straitght", "trapezoid", liquids, 5, 4, 12));
+		list.add(new FilledContainer("Kerosine", "straitght", "trapezoid", liquids, 1, 2, 3));
+		list.add(new FilledContainer("Benzene", "straitght", "hexagon", liquids, 4));
+		list.add(new FilledContainer("Benzene", "straitght", "circle", liquids, 7));
 // сортировка		
 		Collections.sort(list, new FilledContainerMassComparator());
 		
 		System.out.println("Вывод набора емкостей (полный состав атрибутов) и их содержимого:\n");
-		System.out.println("| Тип жидкости | Тип стенки сосуда |  Форма основания  |  Параметры основания | Масса жидкости | Объем жидкости | Высота емкости |");
+		System.out.println("| Тип жидкости | Тип стенки сосуда |  Форма основания  | Масса жидкости | Объем жидкости | Высота емкости |  Параметры основания |");
 		for( FilledContainer a : list ) {
 			
 			a.printInfo();
@@ -51,7 +56,8 @@ public class Run {
 			
 		} else {
 			
-			System.out.println("| Тип жидкости | Тип стенки сосуда |  Форма основания  |  Параметры основания | Масса жидкости | Объем жидкости | Высота емкости |");
+			System.out.println("| Тип жидкости | Тип стенки сосуда |  Форма основания  |"
+					+ " Масса жидкости | Объем жидкости | Высота емкости |  Параметры основания |");
 			minBenzeneMassReference.printInfo();
 			
 		}

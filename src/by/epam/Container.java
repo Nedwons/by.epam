@@ -1,6 +1,6 @@
 package by.epam;
 
-abstract class Container {
+public abstract class Container {
 	
 	public static final int CONTAINER_HIGHT = 10;
 	

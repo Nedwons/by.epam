@@ -1,10 +1,10 @@
-package by.epam;
+package by.epam.container.straight;
 
 public class RectangleStraightContainer extends StraightContainer {
 	
 	private double baseSquare;
 	
-	RectangleStraightContainer (double a, double b ) {
+	public RectangleStraightContainer (double a, double b ) {
 		
 		this.baseSquare = computeSquare(a, b );
 		setVolumeSquare(getSquare());
